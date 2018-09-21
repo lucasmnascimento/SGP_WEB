@@ -1,0 +1,13 @@
+A ser feito:
+
+* ajeitar script no banco (tem incremental, dar uma olhada nisso)
+* rever classes de BO
+* adicionar servlets
+* testar persistência/leitura no banco
+* motor de cálculo e sugestão
+* tela de login
+* níveis de acesso
+* tela de relatório
+* implementar calendário
+* implementação de imagens no projeto
+
