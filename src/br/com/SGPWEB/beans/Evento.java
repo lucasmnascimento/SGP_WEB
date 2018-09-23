@@ -26,7 +26,7 @@ public class Evento {
 		this.id_evento = id_evento;
 	}
 
-    public Evento(int id_evento, int id_cliente, String nomeevento, String tipo, Date datainicio, Date datafim, Date horainicio, Date horafim, double investimento, String descricao, int vendarealizada, String status) {
+    public Evento(int id_evento, int id_cliente, String nomeevento, String tipo, Date datainicio, Date datafim, Date horainicio, Date horafim, String descricao, double investimento, int vendarealizada, String status) {
         this.id_evento = id_evento;
         this.id_cliente = id_cliente;
         this.nomeevento = nomeevento;
