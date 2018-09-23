@@ -19,12 +19,10 @@ import br.com.SGPWEB.beans.Cliente;
 public class ClienteBO {
     public static void cadastrar(Cliente cliente, String cnpj, Connection con) throws Exception{
 		//regra de neg�cio
-		if(cliente.getRazaosocial().length() < 2){
-			throw new Exception("Nome inv�lido");
+		if(cliente.getRazaosocial().length() < 1){
+			throw new Exception("Nome não pode ser vazio!");
 		}
-		if(cliente.getCnpj() <= 0){
-			throw new Exception("Valor inv�lido");
-		}
+                
                 if(ClienteBO.validaCNPJ(cnpj)){
                     throw new Exception("CNPJ Inválido!");
                 }

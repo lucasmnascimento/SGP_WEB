@@ -23,7 +23,7 @@ public class ClienteDAO implements ICliente<Cliente, String> {
 		PreparedStatement pStmt = con.prepareStatement(sql);
 		pStmt.setInt(1, cliente.getId_cliente());
                 pStmt.setInt(2, cliente.getId_representante());
-                pStmt.setInt(3, cliente.getCnpj());
+                pStmt.setString(3, cliente.getCnpj());
                 pStmt.setString(4, cliente.getNomefantasia());
                 pStmt.setString(5, cliente.getClassificacaoabc());
                 pStmt.setString(6, cliente.getCategoria());
@@ -66,7 +66,7 @@ public class ClienteDAO implements ICliente<Cliente, String> {
 			lista.add(new Cliente(
 					rS.getInt("id_cliente"),
 					rS.getInt("idrepresentante"),
-                                        rS.getInt("cnpj"),
+                                        rS.getString("cnpj"),
 					rS.getString("nomefantasia"),                                        
                                         rS.getString("classificacaoabc"),
                                         rS.getString("categoria"),
@@ -109,7 +109,7 @@ public class ClienteDAO implements ICliente<Cliente, String> {
 			lista.add(new Cliente(
 					rS.getInt("id_cliente"),
 					rS.getInt("idrepresentante"),
-                                        rS.getInt("cnpj"),
+                                        rS.getString("cnpj"),
 					rS.getString("nomefantasia"),                                        
                                         rS.getString("classificacaoabc"),
                                         rS.getString("categoria"),
