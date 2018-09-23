@@ -5,7 +5,7 @@ public class Cliente {
 
 	private int id_cliente;
 	private int id_representante;
-        private int cnpj;
+        private String cnpj;
         private String nomefantasia;
         private String classificacaoabc;
         private String categoria;
@@ -34,7 +34,7 @@ public class Cliente {
 		this.id_cliente = id_cliente;
 	}
 
-    public Cliente(int id_cliente, int idrepresentante, int cnpj, String nomefantasia, String classificacaoabc, String categoria, String ambientevendas, String canalvendas, String logo, String razaosocial, int quantidadedelojas, String logradouro, int numero, String complemento, String bairro, String cidade, String estado, int CEP, String outrasinformacoes, String status) {
+    public Cliente(int id_cliente, int idrepresentante, String cnpj, String nomefantasia, String classificacaoabc, String categoria, String ambientevendas, String canalvendas, String logo, String razaosocial, int quantidadedelojas, String logradouro, int numero, String complemento, String bairro, String cidade, String estado, int CEP, String outrasinformacoes, String status) {
         this.id_cliente = id_cliente;
         this.id_representante = idrepresentante;
         this.nomefantasia = nomefantasia;
@@ -153,11 +153,11 @@ public class Cliente {
         this.numero = numero;
     }
 
-    public int getCnpj() {
-        return numero;
+    public String getCnpj() {
+        return cnpj;
     }
 
-    public void setCnpj(int cnpj) {
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
     
