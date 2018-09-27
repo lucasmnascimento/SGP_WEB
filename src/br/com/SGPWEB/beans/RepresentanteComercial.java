@@ -1,5 +1,8 @@
 package br.com.SGPWEB.beans;
 
+import br.com.SGPWEB.entity.StatusEnum;
+import br.com.SGPWEB.entity.NivelAcessoEnum;
+
 public class RepresentanteComercial {
 
 	private int idrepresentante;
@@ -7,10 +10,10 @@ public class RepresentanteComercial {
         private String foto;
         private String email;
         private String cargo;
-        private String nivelacesso;
+        private NivelAcessoEnum nivelacesso;
         private String login;
         private String senha;
-        private Boolean status;
+        private StatusEnum status;
        
 	public RepresentanteComercial(){
 	}
@@ -20,7 +23,7 @@ public class RepresentanteComercial {
 		this.idrepresentante = idrepresentante;
 	}
 
-    public RepresentanteComercial(int idrepresentante, String nome, String foto, String email, String cargo, String nivelacesso, String login, String senha, Boolean status) {
+    public RepresentanteComercial(int idrepresentante, String nome, String foto, String email, String cargo, NivelAcessoEnum nivelacesso, String login, String senha, StatusEnum status) {
         this.idrepresentante = idrepresentante;
         this.nome = nome;
         this.foto = foto;
@@ -72,11 +75,11 @@ public class RepresentanteComercial {
         this.cargo = cargo;
     }
 
-    public String getNivelacesso() {
+    public NivelAcessoEnum getNivelacesso() {
         return nivelacesso;
     }
 
-    public void setNivelacesso(String nivelacesso) {
+    public void setNivelacesso(NivelAcessoEnum nivelacesso) {
         this.nivelacesso = nivelacesso;
     }
 
@@ -96,11 +99,11 @@ public class RepresentanteComercial {
         this.senha = senha;
     }
 
-    public Boolean getStatus() {
+    public StatusEnum getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(StatusEnum status) {
         this.status = status;
     }
         
