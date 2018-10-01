@@ -114,7 +114,7 @@ CREATE TABLE balanco (
     idbalanco SERIAL NOT NULL PRIMARY KEY,
     idcliente integer NOT NULL,
     periodo date,
-    status status_exclusao,
+    status status_exclusao NOT NULL,
 	FOREIGN KEY (idcliente) REFERENCES Cliente(idcliente)
 );
 
@@ -144,7 +144,7 @@ CREATE TABLE cliente (
 
 CREATE TABLE contatocliente (
     idcontatocliente SERIAL NOT NULL PRIMARY KEY,
-    idcliente integer,
+    idcliente integer NOT NULL,
     nome varchar(50) NOT NULL,
     cargo varchar(30) NOT NULL,
     email varchar(50),
@@ -193,7 +193,7 @@ CREATE TABLE itembalanco (
     idproduto integer NOT NULL,
     quantidadevenda integer NOT NULL,
     quantidadeestoque integer NOT NULL,
-	OREIGN KEY (idbalanco) REFERENCES Balanco(idbalanco),
+	FOREIGN KEY (idbalanco) REFERENCES Balanco(idbalanco),
 	FOREIGN KEY (idproduto) REFERENCES Produto(idproduto)
 );
 
