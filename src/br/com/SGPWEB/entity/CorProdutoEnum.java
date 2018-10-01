@@ -1,0 +1,5 @@
+package br.com.SGPWEB.entity;
+
+public enum CorProdutoEnum {
+    PRETO_E_LARANJA, AZUL_E_VERDE, PRETO_E_VERMELHO, AZUL_MARINHO, PRETO, BRANCO, AZUL_E_ROSA, ROSA, VERDE_E_ROXO
+}

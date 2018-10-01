@@ -1,5 +1,7 @@
 package br.com.SGPWEB.beans;
 import java.util.Date;
+import br.com.SGPWEB.entity.StatusEnum;
+
 //beans
 public class Evento {
 
@@ -14,7 +16,7 @@ public class Evento {
         private double investimento;
         private String descricao;
         private int vendarealizada;
-        private String status;
+        private StatusEnum status;
         
        
 	public Evento() {
@@ -26,7 +28,7 @@ public class Evento {
 		this.id_evento = id_evento;
 	}
 
-    public Evento(int id_evento, int id_cliente, String nomeevento, String tipo, Date datainicio, Date datafim, Date horainicio, Date horafim, String descricao, double investimento, int vendarealizada, String status) {
+    public Evento(int id_evento, int id_cliente, String nomeevento, String tipo, Date datainicio, Date datafim, Date horainicio, Date horafim, String descricao, double investimento, int vendarealizada, StatusEnum status) {
         this.id_evento = id_evento;
         this.id_cliente = id_cliente;
         this.nomeevento = nomeevento;
@@ -129,11 +131,11 @@ public class Evento {
         this.vendarealizada = vendarealizada;
     }
 
-    public String getStatus() {
+    public StatusEnum getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusEnum status) {
         this.status = status;
     }
         

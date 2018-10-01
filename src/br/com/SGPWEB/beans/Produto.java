@@ -1,5 +1,11 @@
 package br.com.SGPWEB.beans;
 
+import br.com.SGPWEB.entity.StatusEnum;
+import br.com.SGPWEB.entity.GeneroEnum;
+import br.com.SGPWEB.entity.CategoriaProdutoEnum;
+import br.com.SGPWEB.entity.FxClassificacaoEnum;
+
+
 //beans
 public class Produto {
 
@@ -7,10 +13,10 @@ public class Produto {
 	private String nome;
         private int codigo;
         private int cor;
-        private int classificacao;
-        private int genero;
-        private int status;
-        private int categoria;
+        private FxClassificacaoEnum fxclassificacao;
+        private GeneroEnum genero;
+        private StatusEnum status;
+        private CategoriaProdutoEnum categoria;
         private double valor;
         
 
@@ -24,11 +30,11 @@ public class Produto {
                 this.valor = valor;
 	}
 
-	public Produto(int codigo, String nome, int cor, int classificacao, int genero, int status, int categoria, double valor) {
+	public Produto(int codigo, String nome, int cor, FxClassificacaoEnum fxclassificacao, GeneroEnum genero, StatusEnum status, CategoriaProdutoEnum categoria, double valor) {
 		this.codigo = codigo;
 		this.nome = nome;
                 this.cor = cor;
-                this.classificacao = classificacao;
+                this.fxclassificacao = fxclassificacao;
                 this.genero = genero;
                 this.status = status;
                 this.categoria = categoria;
@@ -67,35 +73,35 @@ public class Produto {
             this.cor = cor;
         }
 
-        public int getClassificacao() {
-            return classificacao;
+        public FxClassificacaoEnum getClassificacao() {
+            return fxclassificacao;
         }
 
-        public void setClassificacao(int classificacao) {
-            this.classificacao = classificacao;
+        public void setClassificacao(FxClassificacaoEnum fxclassificacao) {
+            this.fxclassificacao = fxclassificacao;
         }
 
-        public int getGenero() {
+        public GeneroEnum getGenero() {
             return genero;
         }
 
-        public void setGenero(int genero) {
+        public void setGenero(GeneroEnum genero) {
             this.genero = genero;
         }
 
-        public int getStatus() {
+        public StatusEnum getStatus() {
             return status;
         }
 
-        public void setStatus(int status) {
+        public void setStatus(StatusEnum status) {
             this.status = status;
         }
 
-        public int getCategoria() {
+        public CategoriaProdutoEnum getCategoria() {
             return categoria;
         }
 
-        public void setCategoria(int categoria) {
+        public void setCategoria(CategoriaProdutoEnum categoria) {
             this.categoria = categoria;
         }
 

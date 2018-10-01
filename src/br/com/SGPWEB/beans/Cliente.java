@@ -1,5 +1,11 @@
 package br.com.SGPWEB.beans;
 
+import br.com.SGPWEB.entity.StatusEnum;
+import br.com.SGPWEB.entity.CategoriaClienteEnum;
+import br.com.SGPWEB.entity.ClassificacaoClienteABCEnum;
+import br.com.SGPWEB.entity.AmbienteVendasClienteEnum;
+import br.com.SGPWEB.entity.CanalVendasClienteEnum;
+
 //beans
 public class Cliente {
 
@@ -7,10 +13,10 @@ public class Cliente {
 	private int id_representante;
         private String cnpj;
         private String nomefantasia;
-        private String classificacaoabc;
-        private String categoria;
-        private String ambientevendas;
-        private String canalvendas;
+        private ClassificacaoClienteABCEnum classificacaoabc;
+        private CategoriaClienteEnum categoria;
+        private AmbienteVendasClienteEnum ambientevendas;
+        private CanalVendasClienteEnum canalvendas;
         private String logo;
         private String razaosocial;
         private int quantidadedelojas;
@@ -22,7 +28,7 @@ public class Cliente {
         private String estado;
         private int CEP;
         private String outrasinformacoes;
-        private String status;
+        private StatusEnum status;
         
        
 	public Cliente() {
@@ -34,7 +40,7 @@ public class Cliente {
 		this.id_cliente = id_cliente;
 	}
 
-    public Cliente(int id_cliente, int idrepresentante, String cnpj, String nomefantasia, String classificacaoabc, String categoria, String ambientevendas, String canalvendas, String logo, String razaosocial, int quantidadedelojas, String logradouro, int numero, String complemento, String bairro, String cidade, String estado, int CEP, String outrasinformacoes, String status) {
+    public Cliente(int id_cliente, int idrepresentante, String cnpj, String nomefantasia, ClassificacaoClienteABCEnum classificacaoabc, CategoriaClienteEnum categoria, AmbienteVendasClienteEnum ambientevendas, CanalVendasClienteEnum canalvendas, String logo, String razaosocial, int quantidadedelojas, String logradouro, int numero, String complemento, String bairro, String cidade, String estado, int CEP, String outrasinformacoes, StatusEnum status) {
         this.id_cliente = id_cliente;
         this.id_representante = idrepresentante;
         this.nomefantasia = nomefantasia;
@@ -81,35 +87,35 @@ public class Cliente {
         this.nomefantasia = nomefantasia;
     }
 
-    public String getClassificacaoabc() {
+    public ClassificacaoClienteABCEnum getClassificacaoabc() {
         return classificacaoabc;
     }
 
-    public void setClassificacaoabc(String classificacaoabc) {
+    public void setClassificacaoabc(ClassificacaoClienteABCEnum classificacaoabc) {
         this.classificacaoabc = classificacaoabc;
     }
 
-    public String getCategoria() {
+    public CategoriaClienteEnum getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(CategoriaClienteEnum categoria) {
         this.categoria = categoria;
     }
 
-    public String getAmbientevendas() {
+    public AmbienteVendasClienteEnum getAmbientevendas() {
         return ambientevendas;
     }
 
-    public void setAmbientevendas(String ambientevendas) {
+    public void setAmbientevendas(AmbienteVendasClienteEnum ambientevendas) {
         this.ambientevendas = ambientevendas;
     }
 
-    public String getCanalvendas() {
+    public CanalVendasClienteEnum getCanalvendas() {
         return canalvendas;
     }
 
-    public void setCanalvendas(String canalvendas) {
+    public void setCanalvendas(CanalVendasClienteEnum canalvendas) {
         this.canalvendas = canalvendas;
     }
 
@@ -209,11 +215,11 @@ public class Cliente {
         this.outrasinformacoes = outrasinformacoes;
     }
 
-    public String getStatus() {
+    public StatusEnum getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusEnum status) {
         this.status = status;
     }
         

@@ -1,12 +1,13 @@
 package br.com.SGPWEB.beans;
 import java.util.Date;
+import br.com.SGPWEB.entity.StatusEnum;
 //beans
 public class Balanco {
 
 	private int idbalanco;
 	private int idcliente;
         private Date periodo;
-        private String status;
+        private StatusEnum status;
         private Date datainicio; 
        
 	public Balanco() {
@@ -18,7 +19,7 @@ public class Balanco {
 		this.idbalanco = idbalanco;
 	}
 
-    public Balanco(int idbalanco, int idcliente, Date periodo, String status, Date datainicio) {
+    public Balanco(int idbalanco, int idcliente, Date periodo, StatusEnum status, Date datainicio) {
         this.idbalanco = idbalanco;
         this.idcliente = idcliente;
         this.periodo = periodo;
@@ -50,11 +51,11 @@ public class Balanco {
         this.periodo = periodo;
     }
 
-    public String getStatus() {
+    public StatusEnum getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusEnum status) {
         this.status = status;
     }
 
